@@ -1,0 +1,14 @@
+function FirstReverse(str) { 
+
+let splitString = str.split("");
+
+let reverseArray = splitString.reverse();
+
+str = reverseArray.join("");
+
+  return str; 
+
+}
+   
+// keep this function call here 
+console.log(FirstReverse(readline()));
