@@ -1,0 +1,31 @@
+function LongestWord(sen) { 
+  
+  //separate sen by " " & store each in an array
+  let strSplit = sen.split(" ");
+
+  //remove numbers and characters
+  let newArray = [];
+
+  for(let i = 0; i < strSplit.length; i++){
+    const regex = /[^A-Za-z0-9]/g;
+    const newStr = strSplit[i].replace(regex, "");
+    newArray.push(newStr);
+  }
+
+  //loop over array & sort by .length property
+  let longest = "";
+
+  for(let i = 0; i < newArray.length; i++){
+    if(newArray[i].length > longest.length){
+      longest = newArray[i];
+     }
+  }
+  sen = longest;
+
+  //return 1st item in array (longest)
+  return sen; 
+
+}
+   
+// keep this function call here 
+console.log(LongestWord(readline()));
