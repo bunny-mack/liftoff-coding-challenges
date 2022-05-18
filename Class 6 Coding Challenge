@@ -1,0 +1,13 @@
+function detectWord(str) {
+  
+  let arr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+  let newStr = "";
+  
+  for (let i=0; i < str.length; i++) {
+    if (arr.includes(str[i])) {
+      newStr = newStr.concat("", str[i]);
+    }
+  }
+  return newStr;
+}
