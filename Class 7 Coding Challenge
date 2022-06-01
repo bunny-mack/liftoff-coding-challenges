@@ -1,0 +1,21 @@
+class Person {
+	constructor(name, age) {
+		this.name = name;
+		this.age = age;
+	}
+
+	compareAge(other) {
+		// Write code here!
+		let compare = "";
+		
+		if(other.age > this.age){
+			compare = "older than";
+		} else if (other.age < this.age){
+			compare = "younger than";
+		} else {
+			compare = "the same age as";
+		}
+		
+		return other.name + " is " + compare + " me.";
+	}
+}
